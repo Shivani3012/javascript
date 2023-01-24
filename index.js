@@ -1,5 +1,6 @@
-var myName = "Shivani";  //camelCase 
+/*var myName = "Shivani";  //camelCase 
 console.log(myName);
+*/
 
 
 // six data types 
@@ -9,12 +10,15 @@ console.log(myName);
 // String: typeof instance === "string" 
 // BigInt: typeof instance === "bigint" 
 // Symbol: typeof instance === "symbol" 
- 
+
+/*
 console.log(typeof(myName));
 
 console.log(9 - "5") //4 i.e bug
 
 console.log("hello" - "world")  // returns NaN
+*/
+
 /* interview questions 
 1. Differnce between Null and Undefined (Null is considered as object so it is bug)
 2. What is NaN - Not a Number, NaN is a property of the global, it is a variable in global scope
@@ -30,22 +34,25 @@ console.log("hello" - "world")  // returns NaN
 11. Difference between getElementById() And querySelector()? - getElementById() will use only id selector and querySelector() can use both id and class selector 
 12. Can we use this object in the arrow function or where we can't use this object? - this object doesn't work with the arrow function
 13. Difference between the Higher ORder and Callback function
+14. Difference between Sy7nchronous and Asynchronous Js
 */
+/*
 var myPhone = 987654321;
 console.log(isFinite(myPhone));  // check whether the variable is a number or not and will return true or false
 
-// expressions and operators
-// 1. Assignment Operator
-// 2. Arithmetic
-// 3. Comparison 
-// 4. Logical 
-// 5. String
-// 6. Conditional (ternary) 
+expressions and operators
+1. Assignment Operator
+2. Arithmetic
+3. Comparison 
+4. Logical 
+5. String
+6. Conditional (ternary) 
 var x = 5;
 var y =5 ;
 console.log( "is both equal" + x==y ); // returns false - use of + operator which will compare both the strings
 
 console.log("is both equal : $(x==y)" ); //returns true - use of ECMA script
+*/
 
 /* control statements and loops
 1. if..else
@@ -81,12 +88,13 @@ One can define "named" function expressions(where the name of the expression mig
     }
 funExp(15, 20);
 */ 
-
+/*
 function sum( a, b){  // paramters
     var total = a+b;
 }
 
 sum(10, 20); // arguments
+*/
 
 /* ECMA Script 
   ES6 is used most that is updated in 2015 , it is called as ECMA script 2015 
@@ -127,19 +135,22 @@ sum(10, 20); // arguments
  -> Map() , Reduce() , Filter()
 */
 
+/*
 var myFriends = ['ramesh', 'arjun', 'vishal']; 
 myFriends[0];
 for( var i=0; i<myFriends.length; i++ ){
     console.log(myFriends[i]);
 }
+*/
 
 // After ES6 we can traverse array 
-for(let elements in myFriends ){
+/*for(let elements in myFriends ){
     console.log(elements);
 }
 myFriends.forEach( function(element, index, array){  
     console.log(element + "index: " + index);
 });
+*/
 
 /* CRUD in an Array
  const animals = ['pigs' , 'goats', 'sheep'];
@@ -430,10 +441,53 @@ etc.
     3. Lexical Scoping In Js
         ->inner function can get access to their parent functions variables but the vice-versa is not true
     4. Use Strict Mode
+        -> syntax - "use strict"
+        -> ex - x = "vinod";
+                console.log(x); // will show error because we have used strict mode 
+
     5. this keyword
     6.Closures in js
-    7.What is Asynchronous Js Programming 
-    8. What is Event Loop 
+        -> a closure is the combination of a function bundled together (emclosed) with references to its surrounding state(lexical environment).
+        ->in other words, a closure gives you access to an outer scope from an inner function.
+        -> closures are created every time a function is created, at function creation time. 
+        -> same like lexical scoping
+        -> const outerFun = (a) =>{
+            let b = 10;
+            const innerfun = ()=> {
+                let sum = a+b;    //here a is the variable of outer function and still it can be accessed by the inner function 
+                console.log(`the sum is ${sum}`);
+                }
+            return innerFun;
+            }
+            let checkClosure = outerFun(5);
+            checkClosure(); // will call the sum is 15
+    7.What is Ssynchronous Js Programming 
+        -> Example - 
+                const fun2 = () => {
+                    console.log(`Function 2 is called`);
+                }
+                const fun1 = () => {
+                    console.log(`Function 1 is called`);
+                    fun2();
+                    console.log(`Function 1 is called again`);
+                }
+    8.What is Asynchronous Js Programming
+        ->no one has to wait till another function is completed
+        ->setTimeout() is an asynchronous method 
+        ->Example - 
+                 const fun2 = () => {
+                    setTimeout(() => {
+                        console.log(`Function 2 is called`);
+                    }, 2000);
+                }
+                const fun1 = () => {
+                    console.log(`Function 1 is called`);
+                    fun2();
+                    console.log(`Function 1 is called again`);
+                }
+    9. What is Event Loop 
+        ->JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events,
+        and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
 
 */
 
