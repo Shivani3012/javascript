@@ -493,15 +493,48 @@ etc.
 
 
 /* Function Currying
+    -> It is a technique in functional programming, transformation of the function of multiple arguments into several functions of a single argument in sequence. 
+        The translation of function happens something like this,
+        syntax- 
+        function simpleFunction(param1, param2, param3, .....) => function 
+        curriedFunction(param1)(param2)(param3)(....
+        Ex- const sum = (num1) => (num2) => (num3) => console.log(num1, num2, num3); 
+           // here we have used fat arroe function for creataing three functions for function currying as it consist of one line \
+           so no function and return keywords are used
 */
 
 /*Callback Hell
+    ->Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the
+    previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
 */
 
 /*AJAX call using XMLHttprequest
+    ->The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading 
+    the whole page.
 */
 
 /*JSON
+    ->JSON stands for JavaScript Object Notation
+    JSON is a lightweight data interchange format
+    JSON is language independent *
+    JSON is "self-describing" and easy to understand
+    -> Syntax - {
+            "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"}
+            ]
+            }
+    -> Syntax rules
+        Data is in name/value pairs
+        Data is separated by commas
+        Curly braces hold objects
+        Square brackets hold arrays
+    -> mostly used method 
+        1. JSON.stringify() - turns a js object into JSON text and stores that JSON text in a string
+          ex- JSON.stringify(<JSON_object>)
+        2. JSON.parse() - coverts JSON into object 
+        
 */
 
 /*Fetch API
@@ -509,10 +542,13 @@ etc.
 */
 
 /*Promises
+    For dealing with the problem of the callback hell we use promises
 */
 
 /* Async-Await
+    we want to create an async function then we have to only write only async keyword in starting of any function
 */
 
 /* Error Handling in Js
+    errors can be handles using try and catch block. 
 */
